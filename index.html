@@ -4,13 +4,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Chen — Full Stack Developer</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Momo Yaso — Full Stack Developer</title>
+  <meta name="title" content="Momo Yaso — Full Stack Developer" />
+  <meta name="description"
+    content="Portfolio of Momo Yaso, a Full Stack Developer based in Alexandria building performant, reactive web applications and scalable systems." />
+  <meta name="keywords"
+    content="Momo Yaso, Full Stack Developer, Web Development, Alexandria, React, Node.js, Frontend, Backend, Software Engineer" />
+  <meta name="author" content="Momo Yaso" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://momoyaso.com/" />
+  <meta property="og:title" content="Momo Yaso — Full Stack Developer" />
+  <meta property="og:description"
+    content="I architect scalable systems and craft pixel-perfect interfaces. From distributed backends to reactive UIs — I make the full stack dance." />
+  <meta property="og:image" content="https://momoyaso.com/assets/Images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://momoyaso.com/" />
+  <meta property="twitter:title" content="Momo Yaso — Full Stack Developer" />
+  <meta property="twitter:description"
+    content="I architect scalable systems and craft pixel-perfect interfaces. From distributed backends to reactive UIs — I make the full stack dance." />
+  <meta property="twitter:image" content="https://momoyaso.com/assets/Images/og-image.jpg" />
+
+  <!-- Performance Optimization: Preconnects and DNS Prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon" />
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Scripts: loaded with defer for performance -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -19,451 +57,485 @@
   <div id="cursor"></div>
   <div id="cursor-ring"></div>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">AC_</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#projects">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Hire Me</a>
-  </nav>
+  <!-- HEADER -->
+  <header>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">MY_</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
+      <div class="nav-right">
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <!-- Hamburger Menu Button (Mobile Only) -->
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
-    <!-- FLOATING CODE SNIPPETS -->
-    <div class="float-el code1">const render = () =&gt;<br />&nbsp;&nbsp;future.build();</div>
-    <div class="float-el code2">async function deploy() {<br />&nbsp;&nbsp;await scale(∞);<br />}</div>
-    <div class="float-el code3">type Dream = Promise&lt;Reality&gt;;</div>
-    <div class="float-el code4">git push origin main<br />✓ deployed to prod</div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-noise"></div>
+      <ul class="mobile-links">
+        <li><a href="#about">01. About</a></li>
+        <li><a href="#stack">02. Stack</a></li>
+        <li><a href="#projects">03. Work</a></li>
+        <li><a href="#experience">04. Experience</a></li>
+        <li><a href="#contact">05. Contact</a></li>
+      </ul>
+    </div>
 
-    <div class="hero-content" id="about">
-      <div class="available-badge" id="avail-badge">
-        <div class="available-dot"></div>
-        <span class="available-text">Available for Projects</span>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+
+      <!-- FLOATING CODE SNIPPETS -->
+      <div class="float-el code1">const render = () =&gt;<br />&nbsp;&nbsp;future.build();</div>
+      <div class="float-el code2">async function deploy() {<br />&nbsp;&nbsp;await scale(∞);<br />}</div>
+      <div class="float-el code3">type Dream = Promise&lt;Reality&gt;;</div>
+      <div class="float-el code4">git push origin main<br />✓ deployed to prod</div>
+
+      <div class="hero-content" id="about">
+        <div class="available-badge" id="avail-badge">
+          <div class="available-dot"></div>
+          <span class="available-text">Available for Projects</span>
+        </div>
+
+        <div class="hero-label" id="hero-label">Full Stack Developer — Based in Alexandria</div>
+
+        <h1 class="hero-name" id="hero-name">
+          <span class="line1">MOMO</span>
+          <span class="line2 glitch" data-text="YASO">YASO</span>
+        </h1>
+
+        <p class="hero-role" id="hero-role">
+          // Building digital experiences at the intersection of design &amp; engineering
+        </p>
+
+        <p class="hero-desc" id="hero-desc">
+          I architect scalable systems and craft pixel-perfect interfaces.
+          From distributed backends to reactive UIs — I make the full stack dance.
+        </p>
+
+        <div class="hero-actions" id="hero-actions">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Let's Talk</a>
+        </div>
       </div>
 
-      <div class="hero-label" id="hero-label">Full Stack Developer — Based in San Francisco</div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+  </header>
 
-      <h1 class="hero-name" id="hero-name">
-        <span class="line1">ALEX</span>
-        <span class="line2 glitch" data-text="CHEN">CHEN</span>
-      </h1>
+  <!-- MAIN CONTENT -->
+  <main>
 
-      <p class="hero-role" id="hero-role">
-        // Building digital experiences at the intersection of design &amp; engineering
-      </p>
-
-      <p class="hero-desc" id="hero-desc">
-        I architect scalable systems and craft pixel-perfect interfaces.
-        From distributed backends to reactive UIs — I make the full stack dance.
-      </p>
-
-      <div class="hero-actions" id="hero-actions">
-        <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="#contact" class="btn-secondary">Let's Talk</a>
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track" id="marquee">
+        <div class="marquee-item"><span>●</span> React <span>●</span> Node.js <span>●</span> TypeScript <span>●</span>
+          PostgreSQL <span>●</span> Docker <span>●</span> Kubernetes <span>●</span> AWS <span>●</span> GraphQL
+          <span>●</span> Next.js <span>●</span> Redis <span>●</span> Python <span>●</span> Rust <span>●</span> React
+          <span>●</span> Node.js <span>●</span> TypeScript <span>●</span> PostgreSQL <span>●</span> Docker
+          <span>●</span>
+          Kubernetes <span>●</span> AWS <span>●</span> GraphQL <span>●</span> Next.js <span>●</span> Redis
+          <span>●</span>
+          Python <span>●</span> Rust
+        </div>
       </div>
     </div>
 
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="marquee">
-      <div class="marquee-item"><span>●</span> React <span>●</span> Node.js <span>●</span> TypeScript <span>●</span>
-        PostgreSQL <span>●</span> Docker <span>●</span> Kubernetes <span>●</span> AWS <span>●</span> GraphQL
-        <span>●</span> Next.js <span>●</span> Redis <span>●</span> Python <span>●</span> Rust <span>●</span> React
-        <span>●</span> Node.js <span>●</span> TypeScript <span>●</span> PostgreSQL <span>●</span> Docker <span>●</span>
-        Kubernetes <span>●</span> AWS <span>●</span> GraphQL <span>●</span> Next.js <span>●</span> Redis <span>●</span>
-        Python <span>●</span> Rust
-      </div>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <section id="stats">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <span class="stat-num" data-count="47">0</span>
-        <span class="stat-label">Projects Shipped</span>
-      </div>
-      <div class="stat-item reveal">
-        <span class="stat-num" data-count="6">0</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat-item reveal">
-        <span class="stat-num" data-count="12">0</span>
-        <span class="stat-label">Open Source Repos</span>
-      </div>
-      <div class="stat-item reveal">
-        <span class="stat-num" data-count="99">0</span>
-        <span class="stat-label">% Coffee Driven</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECH STACK -->
-  <section id="stack">
-    <div class="max-w">
-      <div class="section-label">02 — Technology</div>
-      <h2 class="section-title reveal">My Tech<br /><span style="color:var(--cyan)">Arsenal.</span></h2>
-      <p class="reveal" style="font-size:0.8rem;color:var(--muted);max-width:500px;line-height:1.8;margin-top:1rem">
-        Carefully chosen tools for building robust, scalable, and beautiful digital products.
-      </p>
-
-      <div class="tech-grid">
-        <div class="tech-card reveal">
-          <div class="tech-icon">⚛️</div>
-          <div class="tech-name">React</div>
+    <!-- STATS -->
+    <section id="stats">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="47">0</span>
+          <span class="stat-label">Projects Shipped</span>
         </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🟦</div>
-          <div class="tech-name">TypeScript</div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="6">0</span>
+          <span class="stat-label">Years Experience</span>
         </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">💚</div>
-          <div class="tech-name">Node.js</div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="12">0</span>
+          <span class="stat-label">Open Source Repos</span>
         </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">▲</div>
-          <div class="tech-name">Next.js</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🐘</div>
-          <div class="tech-name">PostgreSQL</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🍃</div>
-          <div class="tech-name">MongoDB</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🔴</div>
-          <div class="tech-name">Redis</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🐳</div>
-          <div class="tech-name">Docker</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">☸️</div>
-          <div class="tech-name">Kubernetes</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">☁️</div>
-          <div class="tech-name">AWS</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🔶</div>
-          <div class="tech-name">GraphQL</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🐍</div>
-          <div class="tech-name">Python</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🦀</div>
-          <div class="tech-name">Rust</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">🔥</div>
-          <div class="tech-name">Firebase</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">💜</div>
-          <div class="tech-name">Prisma</div>
-        </div>
-        <div class="tech-card reveal">
-          <div class="tech-icon">⚡</div>
-          <div class="tech-name">Vite</div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="99">0</span>
+          <span class="stat-label">% Coffee Driven</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="max-w">
-      <div class="section-label">03 — Selected Work</div>
-      <h2 class="section-title reveal">Things I've<br /><span style="color:var(--cyan)">Built.</span></h2>
+    <!-- TECH STACK -->
+    <section id="stack">
+      <div class="max-w">
+        <div class="section-label">02 — Technology</div>
+        <h2 class="section-title reveal">My Tech<br /><span style="color:var(--cyan)">Arsenal.</span></h2>
+        <p class="reveal" style="font-size:0.8rem;color:var(--muted);max-width:500px;line-height:1.8;margin-top:1rem">
+          Carefully chosen tools for building robust, scalable, and beautiful digital products.
+        </p>
 
-      <div class="projects-grid">
-
-        <!-- Featured -->
-        <div class="project-card featured reveal">
-          <div class="reveal-overlay"></div>
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0b0f1a,#060810);font-size:5rem;">🚀
-            </div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-thumb-tag">Featured</div>
+        <div class="tech-grid">
+          <div class="tech-card reveal">
+            <div class="tech-icon">⚛️</div>
+            <div class="tech-name">React</div>
           </div>
-          <div class="project-body">
-            <div class="project-title">NebulaCMS — Headless Content Platform</div>
-            <div class="project-desc">
-              A blazing-fast headless CMS powering 200k+ requests/day. Multi-tenant architecture with real-time
-              collaboration, version control, and an intelligent content delivery network.
-            </div>
-            <div class="project-tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Redis</span>
-              <span class="tag">AWS</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">↗ Live Demo</a>
-              <a href="#" class="project-link">⌥ GitHub</a>
-            </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🟦</div>
+            <div class="tech-name">TypeScript</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">💚</div>
+            <div class="tech-name">Node.js</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">▲</div>
+            <div class="tech-name">Next.js</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🐘</div>
+            <div class="tech-name">PostgreSQL</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🍃</div>
+            <div class="tech-name">MongoDB</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🔴</div>
+            <div class="tech-name">Redis</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🐳</div>
+            <div class="tech-name">Docker</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">☸️</div>
+            <div class="tech-name">Kubernetes</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">☁️</div>
+            <div class="tech-name">AWS</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🔶</div>
+            <div class="tech-name">GraphQL</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🐍</div>
+            <div class="tech-name">Python</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🦀</div>
+            <div class="tech-name">Rust</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">🔥</div>
+            <div class="tech-name">Firebase</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">💜</div>
+            <div class="tech-name">Prisma</div>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">⚡</div>
+            <div class="tech-name">Vite</div>
           </div>
         </div>
-
-        <div class="project-card reveal">
-          <div class="reveal-overlay"></div>
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0d0818,#060810)">
-            <div class="project-thumb-bg">🧠</div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-thumb-tag">AI/ML</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">SynthMind — AI Code Assistant</div>
-            <div class="project-desc">
-              An LLM-powered developer assistant with RAG architecture. Understands your codebase context and generates
-              context-aware suggestions.
-            </div>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">OpenAI</span>
-              <span class="tag">Vector DB</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">↗ Live Demo</a>
-              <a href="#" class="project-link">⌥ GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="reveal-overlay"></div>
-          <div class="project-thumb" style="background:linear-gradient(135deg,#060d18,#060810)">
-            <div class="project-thumb-bg">📊</div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-thumb-tag">SaaS</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">FluxBoard — Real-time Analytics</div>
-            <div class="project-desc">
-              Analytics dashboard processing 10M+ events/day. Custom WebSocket layer for live updates, with beautiful
-              data visualizations.
-            </div>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">D3.js</span>
-              <span class="tag">Kafka</span>
-              <span class="tag">ClickHouse</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">↗ Live Demo</a>
-              <a href="#" class="project-link">⌥ GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="reveal-overlay"></div>
-          <div class="project-thumb" style="background:linear-gradient(135deg,#08100d,#060810)">
-            <div class="project-thumb-bg">🔐</div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-thumb-tag">Open Source</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">VaultKit — Auth SDK</div>
-            <div class="project-desc">
-              Drop-in authentication library with 2FA, SSO, and passwordless login. 3k+ stars, used by 200+ production
-              apps.
-            </div>
-            <div class="project-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">JWT</span>
-              <span class="tag">OAuth 2.0</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">↗ Docs</a>
-              <a href="#" class="project-link">⌥ GitHub</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="max-w">
-      <div class="section-label">04 — Experience</div>
-      <h2 class="section-title reveal">Career<br /><span style="color:var(--cyan)">Timeline.</span></h2>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="max-w">
+        <div class="section-label">03 — Selected Work</div>
+        <h2 class="section-title reveal">Things I've<br /><span style="color:var(--cyan)">Built.</span></h2>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem">
-        <div class="timeline">
-          <div class="timeline-item active reveal">
-            <div class="timeline-date">2022 — Present</div>
-            <div class="timeline-role">Senior Full Stack Engineer</div>
-            <div class="timeline-company">Vercel Inc. — San Francisco, CA</div>
-            <div class="timeline-desc">
-              Leading architecture of next-gen deployment infrastructure. Reduced build times by 60% through custom
-              caching layers. Managing a team of 5 engineers.
+        <div class="projects-grid">
+
+          <!-- Featured -->
+          <div class="project-card featured reveal">
+            <div class="reveal-overlay"></div>
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0b0f1a,#060810);font-size:5rem;">
+                🚀
+              </div>
+              <div class="project-thumb-overlay"></div>
+              <div class="project-thumb-tag">Featured</div>
             </div>
-            <div class="timeline-skills">
-              <span class="skill-badge">Next.js</span>
-              <span class="skill-badge">Rust</span>
-              <span class="skill-badge">K8s</span>
+            <div class="project-body">
+              <div class="project-title">NebulaCMS — Headless Content Platform</div>
+              <div class="project-desc">
+                A blazing-fast headless CMS powering 200k+ requests/day. Multi-tenant architecture with real-time
+                collaboration, version control, and an intelligent content delivery network.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">AWS</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">↗ Live Demo</a>
+                <a href="#" class="project-link">⌥ GitHub</a>
+              </div>
             </div>
           </div>
 
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2020 — 2022</div>
-            <div class="timeline-role">Full Stack Developer</div>
-            <div class="timeline-company">Stripe — Remote</div>
-            <div class="timeline-desc">
-              Built merchant-facing dashboard serving 1M+ businesses. Implemented real-time payment analytics and
-              improved checkout conversion by 23%.
+          <div class="project-card reveal">
+            <div class="reveal-overlay"></div>
+            <div class="project-thumb" style="background:linear-gradient(135deg,#0d0818,#060810)">
+              <div class="project-thumb-bg">🧠</div>
+              <div class="project-thumb-overlay"></div>
+              <div class="project-thumb-tag">AI/ML</div>
             </div>
-            <div class="timeline-skills">
-              <span class="skill-badge">React</span>
-              <span class="skill-badge">Go</span>
-              <span class="skill-badge">PostgreSQL</span>
+            <div class="project-body">
+              <div class="project-title">SynthMind — AI Code Assistant</div>
+              <div class="project-desc">
+                An LLM-powered developer assistant with RAG architecture. Understands your codebase context and
+                generates
+                context-aware suggestions.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">OpenAI</span>
+                <span class="tag">Vector DB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">↗ Live Demo</a>
+                <a href="#" class="project-link">⌥ GitHub</a>
+              </div>
             </div>
           </div>
 
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2019 — 2020</div>
-            <div class="timeline-role">Frontend Engineer</div>
-            <div class="timeline-company">Figma — San Francisco, CA</div>
-            <div class="timeline-desc">
-              Contributed to collaborative canvas rendering engine. Optimized WebGL performance for large design files
-              with 10k+ elements.
+          <div class="project-card reveal">
+            <div class="reveal-overlay"></div>
+            <div class="project-thumb" style="background:linear-gradient(135deg,#060d18,#060810)">
+              <div class="project-thumb-bg">📊</div>
+              <div class="project-thumb-overlay"></div>
+              <div class="project-thumb-tag">SaaS</div>
             </div>
-            <div class="timeline-skills">
-              <span class="skill-badge">TypeScript</span>
-              <span class="skill-badge">WebGL</span>
-              <span class="skill-badge">Rust/WASM</span>
+            <div class="project-body">
+              <div class="project-title">FluxBoard — Real-time Analytics</div>
+              <div class="project-desc">
+                Analytics dashboard processing 10M+ events/day. Custom WebSocket layer for live updates, with beautiful
+                data visualizations.
+              </div>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">D3.js</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">ClickHouse</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">↗ Live Demo</a>
+                <a href="#" class="project-link">⌥ GitHub</a>
+              </div>
             </div>
           </div>
+
+          <div class="project-card reveal">
+            <div class="reveal-overlay"></div>
+            <div class="project-thumb" style="background:linear-gradient(135deg,#08100d,#060810)">
+              <div class="project-thumb-bg">🔐</div>
+              <div class="project-thumb-overlay"></div>
+              <div class="project-thumb-tag">Open Source</div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">VaultKit — Auth SDK</div>
+              <div class="project-desc">
+                Drop-in authentication library with 2FA, SSO, and passwordless login. 3k+ stars, used by 200+ production
+                apps.
+              </div>
+              <div class="project-tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">JWT</span>
+                <span class="tag">OAuth 2.0</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">↗ Docs</a>
+                <a href="#" class="project-link">⌥ GitHub</a>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
 
-        <div>
-          <div class="section-label" style="margin-bottom:1.5rem">Education &amp; Certs</div>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="max-w">
+        <div class="section-label">04 — Experience</div>
+        <h2 class="section-title reveal">Career<br /><span style="color:var(--cyan)">Timeline.</span></h2>
 
+        <div class="experience-layout">
           <div class="timeline">
-            <div class="timeline-item reveal">
-              <div class="timeline-date">2015 — 2019</div>
-              <div class="timeline-role">B.S. Computer Science</div>
-              <div class="timeline-company">UC Berkeley — GPA: 3.9</div>
-              <div class="timeline-desc">Specialized in distributed systems and compilers. Senior thesis on CRDT-based
-                collaborative text editors.</div>
+            <div class="timeline-item active reveal">
+              <div class="timeline-date">2022 — Present</div>
+              <div class="timeline-role">Senior Full Stack Engineer</div>
+              <div class="timeline-company">Vercel Inc. — San Francisco, CA</div>
+              <div class="timeline-desc">
+                Leading architecture of next-gen deployment infrastructure. Reduced build times by 60% through custom
+                caching layers. Managing a team of 5 engineers.
+              </div>
+              <div class="timeline-skills">
+                <span class="skill-badge">Next.js</span>
+                <span class="skill-badge">Rust</span>
+                <span class="skill-badge">K8s</span>
+              </div>
             </div>
 
             <div class="timeline-item reveal">
-              <div class="timeline-date">2023</div>
-              <div class="timeline-role">AWS Solutions Architect</div>
-              <div class="timeline-company">Amazon Web Services</div>
-              <div class="timeline-desc">Professional certification in cloud architecture, security, and cost
-                optimization.</div>
+              <div class="timeline-date">2020 — 2022</div>
+              <div class="timeline-role">Full Stack Developer</div>
+              <div class="timeline-company">Stripe — Remote</div>
+              <div class="timeline-desc">
+                Built merchant-facing dashboard serving 1M+ businesses. Implemented real-time payment analytics and
+                improved checkout conversion by 23%.
+              </div>
+              <div class="timeline-skills">
+                <span class="skill-badge">React</span>
+                <span class="skill-badge">Go</span>
+                <span class="skill-badge">PostgreSQL</span>
+              </div>
             </div>
 
             <div class="timeline-item reveal">
-              <div class="timeline-date">2022</div>
-              <div class="timeline-role">CKA — Certified Kubernetes Admin</div>
-              <div class="timeline-company">Cloud Native Computing Foundation</div>
-              <div class="timeline-desc">Container orchestration and production cluster management.</div>
+              <div class="timeline-date">2019 — 2020</div>
+              <div class="timeline-role">Frontend Engineer</div>
+              <div class="timeline-company">Figma — San Francisco, CA</div>
+              <div class="timeline-desc">
+                Contributed to collaborative canvas rendering engine. Optimized WebGL performance for large design files
+                with 10k+ elements.
+              </div>
+              <div class="timeline-skills">
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">WebGL</span>
+                <span class="skill-badge">Rust/WASM</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-label" style="margin-bottom:1.5rem">Education &amp; Certs</div>
+
+            <div class="timeline">
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2015 — 2019</div>
+                <div class="timeline-role">B.S. Computer Science</div>
+                <div class="timeline-company">UC Berkeley — GPA: 3.9</div>
+                <div class="timeline-desc">Specialized in distributed systems and compilers. Senior thesis on CRDT-based
+                  collaborative text editors.</div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-role">AWS Solutions Architect</div>
+                <div class="timeline-company">Amazon Web Services</div>
+                <div class="timeline-desc">Professional certification in cloud architecture, security, and cost
+                  optimization.</div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-role">CKA — Certified Kubernetes Admin</div>
+                <div class="timeline-company">Cloud Native Computing Foundation</div>
+                <div class="timeline-desc">Container orchestration and production cluster management.</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="max-w">
-      <div class="section-label">05 — Contact</div>
-      <h2 class="section-title reveal">Let's Build<br /><span style="color:var(--cyan)">Together.</span></h2>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="max-w">
+        <div class="section-label">05 — Contact</div>
+        <h2 class="section-title reveal">Let's Build<br /><span style="color:var(--cyan)">Together.</span></h2>
 
-      <div class="contact-layout">
-        <div class="reveal-left">
-          <div class="contact-info-title">Got a project in mind?</div>
-          <div class="contact-info-text">
-            I'm currently available for freelance work and interesting full-time opportunities.
-            If you have a project you'd like to collaborate on, let's talk.
+        <div class="contact-layout">
+          <div class="reveal-left">
+            <div class="contact-info-title">Got a project in mind?</div>
+            <div class="contact-info-text">
+              I'm currently available for freelance work and interesting full-time opportunities.
+              If you have a project you'd like to collaborate on, let's talk.
+            </div>
+            <div class="contact-links">
+              <a href="mailto:momo@example.com" class="contact-link-item">
+                <div class="contact-link-icon">✉</div>
+                momo@example.com
+              </a>
+              <a href="#" class="contact-link-item">
+                <div class="contact-link-icon">𝕏</div>
+                @momo
+              </a>
+              <a href="#" class="contact-link-item">
+                <div class="contact-link-icon">in</div>
+                linkedin.com/in/momo
+              </a>
+              <a href="#" class="contact-link-item">
+                <div class="contact-link-icon">⌥</div>
+                github.com/momo
+              </a>
+            </div>
           </div>
-          <div class="contact-links">
-            <a href="mailto:alex@example.com" class="contact-link-item">
-              <div class="contact-link-icon">✉</div>
-              alex@example.com
-            </a>
-            <a href="#" class="contact-link-item">
-              <div class="contact-link-icon">𝕏</div>
-              @alexchendev
-            </a>
-            <a href="#" class="contact-link-item">
-              <div class="contact-link-icon">in</div>
-              linkedin.com/in/alexchen
-            </a>
-            <a href="#" class="contact-link-item">
-              <div class="contact-link-icon">⌥</div>
-              github.com/alexchen
-            </a>
-          </div>
+
+          <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input class="form-input" type="text" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input class="form-input" type="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <input class="form-input" type="text" placeholder="Project inquiry" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit"><span>Send Message →</span></button>
+            <div id="form-msg" style="font-size:0.7rem;color:var(--lime);display:none;margin-top:0.5rem">
+              ✓ Message sent! I'll get back to you within 24 hours.
+            </div>
+          </form>
         </div>
-
-        <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Name</label>
-              <input class="form-input" type="text" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email</label>
-              <input class="form-input" type="email" placeholder="john@example.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Subject</label>
-            <input class="form-input" type="text" placeholder="Project inquiry" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit"><span>Send Message →</span></button>
-          <div id="form-msg" style="font-size:0.7rem;color:var(--lime);display:none;margin-top:0.5rem">
-            ✓ Message sent! I'll get back to you within 24 hours.
-          </div>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-copy">
-      © 2024 Alex Chen — Crafted with precision &amp; too much coffee
+      © 2026 Momo Yaso — Crafted with precision &amp; too much coffee
     </div>
     <a href="#hero" class="footer-top">↑ Back to top</a>
   </footer>
 
-  <script src="./js/main.js"></script>
+  <!-- SCROLL TO TOP -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    ↑
+  </button>
 </body>
 
 </html>

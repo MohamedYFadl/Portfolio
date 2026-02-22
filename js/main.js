@@ -148,3 +148,111 @@ gsap.to('.code3', {
     y: -60, ease: 'none',
     scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 0.8 }
 });
+
+// MOBILE MENU LOGIC
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-links a');
+
+function toggleMenu() {
+    const isOpen = menuToggle.classList.contains('open');
+    menuToggle.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+
+    // Toggle the menu-open class on nav to remove background blur
+    document.querySelector('nav').classList.toggle('menu-open');
+
+    document.body.style.overflow = isOpen ? '' : 'hidden'; // Prevent scrolling when open
+}
+
+menuToggle.addEventListener('click', toggleMenu);
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
+});
+
+// SCROLL TO TOP LOGIC
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight / 2) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// ACTIVE NAVIGATION HIGHLIGHTING (SCROLL SPY)
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a, .mobile-links a');
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // trigger when 50% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Remove active class from all links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            });
+            // Add active class to corresponding links
+            const id = entry.target.getAttribute('id');
+            const activeLinks = document.querySelectorAll(`.nav-links a[href="#${id}"], .mobile-links a[href="#${id}"]`);
+            activeLinks.forEach(link => {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            });
+        }
+    });
+}, observerOptions);
+
+sections.forEach(sec => observer.observe(sec));
+
+// 3D CARD TILT EFFECT
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within the element.
+        const y = e.clientY - rect.top;  // y position within the element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Calculate rotation amounts. Math.max/min to cap the rotation to a subtle effect.
+        const rotateX = ((y - centerY) / centerY) * -5; // max ±5 deg rotation
+        const rotateY = ((x - centerX) / centerX) * 5;  // max ±5 deg rotation
+
+        // Apply transform via GSAP for smoothness
+        gsap.to(card, {
+            rotationX: rotateX,
+            rotationY: rotateY,
+            transformPerspective: 1000,
+            ease: 'power1.out',
+            duration: 0.3
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        // Reset card rotation on mouse leave
+        gsap.to(card, {
+            rotationX: 0,
+            rotationY: 0,
+            ease: 'power3.out',
+            duration: 0.5
+        });
+    });
+});
